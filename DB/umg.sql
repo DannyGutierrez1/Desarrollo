@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 30-10-2024 a las 02:20:27
--- Versión del servidor: 8.0.30
--- Versión de PHP: 8.1.10
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 30-10-2024 a las 03:43:38
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `empleados`;
 CREATE TABLE `empleados` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `fecha` date NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `tareas` varchar(50) NOT NULL,
@@ -54,7 +54,7 @@ INSERT INTO `empleados` (`id`, `fecha`, `nombre`, `tareas`, `proyectos`, `materi
 
 DROP TABLE IF EXISTS `materiales`;
 CREATE TABLE `materiales` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `codigo` varchar(50) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `direccion` mediumtext NOT NULL,
@@ -78,7 +78,7 @@ INSERT INTO `materiales` (`id`, `codigo`, `nombre`, `direccion`, `tipo`, `cantid
 
 DROP TABLE IF EXISTS `proyectos`;
 CREATE TABLE `proyectos` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_fin` date NOT NULL,
   `nombre` varchar(50) NOT NULL,
@@ -104,7 +104,7 @@ INSERT INTO `proyectos` (`id`, `fecha_inicio`, `fecha_fin`, `nombre`, `descripci
 
 DROP TABLE IF EXISTS `tareas`;
 CREATE TABLE `tareas` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `fecha_inicio` date NOT NULL,
   `fecha_fin` date NOT NULL,
   `nombre_tarea` varchar(50) NOT NULL,
@@ -127,7 +127,7 @@ INSERT INTO `tareas` (`id`, `fecha_inicio`, `fecha_fin`, `nombre_tarea`, `estado
 
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `user_type` varchar(50) DEFAULT NULL
@@ -150,7 +150,7 @@ INSERT INTO `users` (`id`, `username`, `password`, `user_type`) VALUES
 
 DROP TABLE IF EXISTS `user_type`;
 CREATE TABLE `user_type` (
-  `id` int NOT NULL,
+  `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -210,37 +210,37 @@ ALTER TABLE `user_type`
 -- AUTO_INCREMENT de la tabla `empleados`
 --
 ALTER TABLE `empleados`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `materiales`
 --
 ALTER TABLE `materiales`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `proyectos`
 --
 ALTER TABLE `proyectos`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tareas`
 --
 ALTER TABLE `tareas`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `user_type`
 --
 ALTER TABLE `user_type`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
