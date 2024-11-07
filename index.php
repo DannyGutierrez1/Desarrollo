@@ -76,7 +76,7 @@ include 'assets/header.php'; ?>
         <div class="text-center">
             <p>© <script>
                     document.write(new Date().getFullYear())
-                </script> Creado por Juan Fernando</p>
+                </script> Ingenieria en sistemas UMG 2024</p>
         </div>
     </footer>
     <?php include 'assets/scripts.php'; ?>
