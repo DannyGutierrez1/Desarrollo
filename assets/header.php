@@ -13,6 +13,22 @@
     background-attachment: fixed;
 }
 
+/* Efecto de opacidad y movimiento al cargar el logo */
+@keyframes fadeInLogo {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.auth-logo img {
+    animation: fadeInLogo 1.5s ease-in-out;
+}
+
 /* Efecto de opacidad y movimiento al cargar */
 @keyframes fadeIn {
     from {
