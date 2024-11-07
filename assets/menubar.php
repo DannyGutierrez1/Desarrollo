@@ -7,6 +7,7 @@
     color: #ffffff;
 }
 
+
 /* Efecto de sombra y bordes redondeados */
 .navbar-brand-box, .navbar-nav .nav-item .menu-link {
     border-radius: 8px;
